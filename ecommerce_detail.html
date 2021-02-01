@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "style.css"%}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+          <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src="{{ecommerce.image}}" alt="Card image cap">
+         </div>
+      </div>
+   </div>
+
+       <div class="card-body">
+         <div class="card-title" id="name">
+           <ul>
+             <li>{{ecommerce.name}}</li>
+           </ul>
+
+         </div>
+
+         <div class="card-title" id="dname">
+           <ul>
+             <li>{{ecommerce.description}}</li>
+           </ul>
+
+         </div>
+         <div class="card-title" id="price">
+           <ul>
+             <li><strike>INR {{ecommerce.price}}</strike></li>
+           </ul>
+
+         </div>
+          <div class="card-title" id="dprice">
+            <ul>
+              <li>INR {{ecommerce.discounted_price}}</li>
+            </ul>
+
+          </div>
+       </div>
+     </div>
+
+   </div>
+
+
+  </div>
+  </body>
+</html>
